@@ -25,24 +25,24 @@ const FuturisticFormConcept: React.FC = () => {
   ]
 
   return (
-    <div className="flex items-center justify-center max-w-sm w-full h-full  bg-black rounded-2xl">
+    <div className="flex items-center justify-center max-w-sm w-full h-full  bg-black rounded-2xl max-h-[310px] ">
       <motion.div
         className="relative w-full max-w-sm bg-transparent rounded-2xl overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-xl" />
-        <form onSubmit={handleSubmit} className="relative flex flex-col items-center justify-center h-full p-6 space-y-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-xl max-h-[310px]" />
+        <form onSubmit={handleSubmit} className="relative flex flex-col items-center justify-center h-full p-4 space-y-7 max-h-[310px]">
           <motion.h2
-            className="text-3xl font-bold text-white mb-2"
+            className="text-3xl font-bold text-white mt-2"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 260, damping: 20 }}
           >
             Enter the Void
           </motion.h2>
-          <div className="w-full space-y-6">
+          <div className="w-full space-y-1">
             {inputFields.map((field, index) => (
               <motion.div
                 key={field.name}
@@ -85,7 +85,7 @@ const FuturisticFormConcept: React.FC = () => {
           </div>
           <motion.button 
             type="submit"
-            className="w-full py-3 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium text-lg relative overflow-hidden group"
+            className="w-full py-3 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium text-lg relative overflow-hidden group mb-4"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
